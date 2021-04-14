@@ -25,7 +25,7 @@ export default function SearchAppBar() {
             <GitHubIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Github-Finder
+            Github Viewer
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
