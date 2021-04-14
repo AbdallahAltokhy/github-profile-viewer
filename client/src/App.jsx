@@ -1,8 +1,10 @@
+import Nav from './components/Nav/Nav';
+
 
 function App () {
   return (
     <div className="App">
-      Hello World!
+      <Nav />
     </div>
   );
 }
