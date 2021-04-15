@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
 import getUser from './services/userService';
 import Home from './components/Home/Home';
-// import Profile from './components/Dashboard';
 import Profile from './components/Profile/Profile';
 
 const App = () => {
@@ -13,6 +12,7 @@ const App = () => {
 		getUser('AbdallahAltokhy').then((data) => setUser(data));
 	}, []);
 
+	console.log(user);
 	return (
 		<>
 			<Router>

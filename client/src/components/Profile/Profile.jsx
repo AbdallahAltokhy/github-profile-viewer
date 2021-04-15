@@ -22,6 +22,7 @@ import SideList from './Side List/SideList.jsx';
 import UserGists from './User gists/UserGists';
 import UserRepos from './User Repos/UserRepos';
 import UserOrgs from './User Orgs/UserOrgs';
+import UserCard from './UserCard/UserCard';
 
 function Copyright() {
 	return (
@@ -36,7 +37,7 @@ function Copyright() {
 	);
 }
 
-export default function Dashboard() {
+export default function Dashboard({ user }) {
 	const classes = useStyles();
 	const [open, setOpen] = React.useState(true);
 	const [renderedComponent, setRenderedComponent] = React.useState('test');
@@ -53,15 +54,14 @@ export default function Dashboard() {
 	const handleRender = (component) => {
 		setRenderedComponent(component);
 	};
-
 	const renderSwitch = () => {
 		switch (renderedComponent) {
 			case 'repos':
-				return <UserRepos />;
+				return <UserRepos user={user} />;
 			case 'gists':
-				return <UserGists />;
+				return <UserGists user={user} />;
 			default:
-				return <UserOrgs />;
+				return <UserOrgs user={user} />;
 		}
 	};
 
@@ -114,6 +114,11 @@ export default function Dashboard() {
 			<main className={classes.content}>
 				<div className={classes.appBarSpacer} />
 				<Container maxWidth="lg" className={classes.container}>
+					<Grid container spacing={3}>
+						<Grid item xs={12}>
+							<UserCard user={user} />
+						</Grid>
+					</Grid>
 					<Grid container spacing={3}>
 						<Grid item xs={12}>
 							<Paper className={classes.paper}>{renderSwitch()}</Paper>
