@@ -1,0 +1,38 @@
+.user-repos {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.repo {
+	display: flex;
+	justify-content: space-around;
+	border: 1px dotted blueviolet;
+	border-radius: 8px;
+	margin: 2px auto;
+	width: 90%;
+	height: 70px;
+}
+
+.repo:hover {
+	background-color: blueviolet;
+	color: aliceblue;
+	border: 1px solid white;
+}
+
+.repo-name {
+	flex: 1;
+	text-align: center;
+}
+
+.repo-url {
+	flex: 1;
+	margin: auto;
+	text-decoration: none;
+	color: black;
+	font-size: 1rem;
+}
+
+.repo-url:hover {
+	color: aliceblue;
+}

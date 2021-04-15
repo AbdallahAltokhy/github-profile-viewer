@@ -56,12 +56,12 @@ export default function Dashboard({ user }) {
 	};
 	const renderSwitch = () => {
 		switch (renderedComponent) {
-			case 'repos':
-				return <UserRepos user={user} />;
+			case 'orgs':
+				return <UserOrgs user={user} />;
 			case 'gists':
 				return <UserGists user={user} />;
 			default:
-				return <UserOrgs user={user} />;
+				return <UserRepos user={user} />;
 		}
 	};
 

@@ -1,9 +1,11 @@
 import Avatar from '@material-ui/core/Avatar';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 import './userCard.css';
 
 const UserCard = ({ user }) => {
 	return Object.keys(user).length === 0 ? (
-		<h1>waiting for user</h1>
+		<CircularProgress />
 	) : (
 		<div className="user-card">
 			<div className="user-profile">
@@ -22,8 +24,8 @@ const UserCard = ({ user }) => {
 				<div className="figures">
 					<div className="user-figures">Followers: {user.data.followers}</div>
 					<div className="user-figures">Following: {user.data.following}</div>
-					<div className="user-figures">Repos: {user.data.public_gists}</div>
-					<div className="user-figures">Gists: {user.data.public_repos}</div>
+					<div className="user-figures">Repos: {user.data.public_repos}</div>
+					<div className="user-figures">Gists: {user.data.public_gists}</div>
 				</div>
 			</div>
 		</div>
