@@ -12,13 +12,13 @@ const UserRepos = ({ user }) => {
 	}, []);
 
 	console.log(repos);
-	return Object.keys(repos).length === 0 ? (
+	return repos.length === 0 ? (
 		<CircularProgress />
 	) : (
 		<div className="user-repos">
 			{repos.map((repo) => {
 				return (
-					<div className="repo">
+					<div className="repo" key={repo.name}>
 						<h2 className="repo-name">{repo.name}</h2>
 						<a
 							className="repo-url"

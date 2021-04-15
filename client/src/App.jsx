@@ -9,7 +9,7 @@ const App = () => {
 	const [user, setUser] = useState({});
 
 	useEffect(() => {
-		getUser('AbdallahAltokhy').then((data) => setUser(data));
+		getUser('akoenig').then((data) => setUser(data));
 	}, []);
 
 	console.log(user);
