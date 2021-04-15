@@ -7,7 +7,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 
-const MainListItems = ({ handleRender }) => {
+const SideList = ({ handleRender }) => {
 	return (
 		<div>
 			<ListItem button>
@@ -38,4 +38,4 @@ const MainListItems = ({ handleRender }) => {
 	);
 };
 
-export default MainListItems;
+export default SideList;

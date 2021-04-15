@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
       display: 'block',
     },
   },
+  avatar: {
+    textDecoration: 'none',
+    color: "white"
+  },
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,

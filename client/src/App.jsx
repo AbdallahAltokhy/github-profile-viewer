@@ -4,7 +4,7 @@ import Nav from './components/Nav/Nav';
 import getUser from './services/userService';
 import Home from './components/Home/Home';
 // import Profile from './components/Dashboard';
-import Dashboard from './components/Profile/Dashboard';
+import Profile from './components/Profile/Profile';
 
 const App = () => {
 	const [user, setUser] = useState({});
@@ -22,7 +22,7 @@ const App = () => {
 						<Home user={user} />
 					</Route>
 					<Route exact path="/profile">
-						<Dashboard user={user} />
+						<Profile user={user} />
 					</Route>
 				</Switch>
 			</Router>

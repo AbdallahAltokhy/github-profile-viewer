@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
+import { Link } from 'react-router-dom';
 import './home.css';
 
 export default function Home({ user }) {
@@ -30,9 +31,11 @@ export default function Home({ user }) {
 				</CardContent>
 			</CardActionArea>
 			<CardActions>
-				<Button size="small" color="primary">
-					Learn More
-				</Button>
+				<Link to="/profile" className="details-btn">
+					<Button size="small" color="primary">
+						Learn More
+					</Button>
+				</Link>
 			</CardActions>
 		</Card>
 	);
