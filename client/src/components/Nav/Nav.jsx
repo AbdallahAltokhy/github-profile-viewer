@@ -13,9 +13,9 @@ export default function SearchAppBar({ getUser }) {
 	const classes = useStyles();
 
 	const handleChange = (e) => {
-		if (e.keyCode == 13) {
-			console.log('value', e.target.value);
+		if (e.keyCode === 13) {
 			getUser(e.target.value);
+			e.target.value = '';
 		}
 	};
 
