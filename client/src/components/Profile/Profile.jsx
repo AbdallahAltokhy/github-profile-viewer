@@ -6,34 +6,20 @@ import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import useStyles from './profileStyle';
 import SideList from './Side List/SideList.jsx';
+import CopyRights from './Copy rights/CopyRights.jsx';
 import UserGists from './User gists/UserGists';
 import UserRepos from './User Repos/UserRepos';
 import UserOrgs from './User Orgs/UserOrgs';
 import UserCard from './UserCard/UserCard';
-
-function Copyright() {
-	return (
-		<Typography variant="body2" color="textSecondary" align="center">
-			{'Copyright © '}
-			<Link color="inherit" href="https://github.com/AbdallahAltokhy">
-				Abdallah Altokhy
-			</Link>{' '}
-			{new Date().getFullYear()}
-			{'.'}
-		</Typography>
-	);
-}
 
 export default function Dashboard({ user }) {
 	const classes = useStyles();
@@ -118,7 +104,7 @@ export default function Dashboard({ user }) {
 						</Grid>
 					</Grid>
 					<Box pt={4}>
-						<Copyright />
+						<CopyRights />
 					</Box>
 				</Container>
 			</main>
