@@ -12,7 +12,10 @@ import './home.css';
 
 export default function Home({ user }) {
 	return Object.keys(user).length === 0 ? (
-		<CircularProgress />
+		<div className="home-loading">
+			<CircularProgress />
+			<h1>Search by username and press enter </h1>
+		</div>
 	) : (
 		<Card className="card-container">
 			<CardActionArea>

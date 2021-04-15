@@ -12,7 +12,7 @@ const UserGists = ({ user }) => {
 
 	console.log(gists);
 	return gists.length === 0 ? (
-		<h1>This user has no Gists</h1>
+		<h1 className="no-gists">This user has no Gists</h1>
 	) : (
 		<div className="user-gists">
 			{gists.map((gist) => {

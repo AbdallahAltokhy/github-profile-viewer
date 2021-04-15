@@ -9,14 +9,12 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import useStyles from './profileStyle';
 import SideList from './Side List/SideList.jsx';
 import UserGists from './User gists/UserGists';
@@ -56,12 +54,13 @@ export default function Dashboard({ user }) {
 	};
 	const renderSwitch = () => {
 		switch (renderedComponent) {
+			case 'repos':
+				return <UserRepos user={user} />;
 			case 'orgs':
 				return <UserOrgs user={user} />;
 			case 'gists':
 				return <UserGists user={user} />;
 			default:
-				return <UserRepos user={user} />;
 		}
 	};
 
@@ -84,12 +83,6 @@ export default function Dashboard({ user }) {
 						)}
 					>
 						<MenuIcon />
-					</IconButton>
-					{/* /TODO: add user profile picture here  		 */}
-					<IconButton color="inherit">
-						<Badge badgeContent={4} color="secondary">
-							<NotificationsIcon />
-						</Badge>
 					</IconButton>
 				</Toolbar>
 			</AppBar>

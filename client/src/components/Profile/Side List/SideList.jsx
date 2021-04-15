@@ -3,7 +3,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 
@@ -14,11 +14,11 @@ const SideList = ({ handleRender }) => {
 				<ListItemIcon>
 					<DashboardIcon />
 				</ListItemIcon>
-				<ListItemText primary="Dashboard" />
+				<ListItemText primary="User Profile" />
 			</ListItem>
 			<ListItem button onClick={() => handleRender('repos')}>
 				<ListItemIcon>
-					<PeopleIcon />
+					<FormatListBulletedIcon />
 				</ListItemIcon>
 				<ListItemText primary="Repos" />
 			</ListItem>
@@ -30,7 +30,7 @@ const SideList = ({ handleRender }) => {
 			</ListItem>
 			<ListItem button onClick={() => handleRender('orgs')}>
 				<ListItemIcon>
-					<ShoppingCartIcon />
+					<PeopleIcon />
 				</ListItemIcon>
 				<ListItemText primary="Organizations" />
 			</ListItem>

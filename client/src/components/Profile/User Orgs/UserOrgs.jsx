@@ -10,9 +10,8 @@ const UserOrgs = ({ user }) => {
 		getUserOrgs(userName).then((data) => setorgs(data.data));
 	}, []);
 
-	console.log(orgs);
 	return orgs.length === 0 ? (
-		<h1>This user has no organizations</h1>
+		<h1 className="no-orgs">This user has no organizations</h1>
 	) : (
 		<div className="user-orgs">
 			{orgs.map((org) => {

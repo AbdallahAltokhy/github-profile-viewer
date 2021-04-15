@@ -9,9 +9,16 @@ import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
 import useStyles from './nav-styles.js';
 
-export default function SearchAppBar() {
+export default function SearchAppBar({ getUser }) {
 	const classes = useStyles();
-
+	const handleChange = (e) => {
+		if (e.keyCode == 13) {
+			console.log('value', e.target.value);
+			getUser(e.target.value);
+		}
+		// put the login here
+		// console.log('value', e.target.value);
+	};
 	return (
 		<div className={classes.root}>
 			<AppBar position="static">
@@ -35,6 +42,7 @@ export default function SearchAppBar() {
 						</div>
 						<InputBase
 							placeholder="Search…"
+							onKeyDown={handleChange}
 							classes={{
 								root: classes.inputRoot,
 								input: classes.inputInput,

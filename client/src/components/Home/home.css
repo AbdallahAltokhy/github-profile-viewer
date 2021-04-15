@@ -1,6 +1,7 @@
 .card-container {
 	width: 300px;
 	text-align: center;
+	margin: 50px auto;
 }
 
 .card-avatar {
@@ -11,4 +12,9 @@
 
 .details-btn {
 	text-decoration: none;
+}
+
+.home-loading {
+	text-align: center;
+	margin-top: 100px;
 }

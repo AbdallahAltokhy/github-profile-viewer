@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
 import getUser from './services/userService';
@@ -8,15 +8,16 @@ import Profile from './components/Profile/Profile';
 const App = () => {
 	const [user, setUser] = useState({});
 
-	useEffect(() => {
-		getUser('akoenig').then((data) => setUser(data));
-	}, []);
+	const getUserData = (userName) => {
+		getUser(userName)
+			.then((data) => setUser(data))
+			.catch((err) => alert('please enter a valid username'));
+	};
 
-	console.log(user);
 	return (
 		<>
 			<Router>
-				<Nav />
+				<Nav getUser={getUserData} />
 				<Switch>
 					<Route exact path="/">
 						<Home user={user} />

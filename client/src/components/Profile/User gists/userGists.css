@@ -36,3 +36,7 @@
 .gist-url:hover {
 	color: aliceblue;
 }
+
+.no-gists {
+	text-align: center;
+}

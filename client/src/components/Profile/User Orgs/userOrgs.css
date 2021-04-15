@@ -36,3 +36,7 @@
 .org-url:hover {
 	color: aliceblue;
 }
+
+.no-orgs {
+	text-align: center;
+}
