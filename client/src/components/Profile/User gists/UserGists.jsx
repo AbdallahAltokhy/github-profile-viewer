@@ -18,7 +18,7 @@ const UserGists = ({ user }) => {
 			{gists.map((gist) => {
 				return (
 					<div className="gist" key={gist.url}>
-						<h2 className="gist-name">Gist URl</h2>
+						<h2 className="gist-name">Gist url 👉</h2>
 						<a
 							className="gist-url"
 							href={gist.git_pull_url}
