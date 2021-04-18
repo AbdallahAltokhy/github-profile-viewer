@@ -1,6 +1,6 @@
 ## Getting started
 
-Netlify Deployed URL : https://607b6eaf817f680007a12b9f--github-profile-viewer-app.netlify.app/
+Netlify Deployed URL : https://github-profile-viewer-app.netlify.app/
 
 1. clone the repo
 
